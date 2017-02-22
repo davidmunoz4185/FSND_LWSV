@@ -2,10 +2,10 @@
 
 ### Let me access ...
 
-* IP Address and SSH Port
+##### IP Address and SSH Port
 
-** IP: 34.200.97.254
-** Port: 2200
+* IP: 34.200.97.254
+* Port: 2200
 
 ### Let me see your application ...
 
