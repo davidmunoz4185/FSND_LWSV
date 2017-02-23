@@ -246,10 +246,11 @@ def showCategory(category_name):
 
 @app.route("/catalog/<string:category_name>/<string:item_title>")
 def showItem(category_name, item_title):
-    user_id = None
-    if "email" in login_session:
-        user_id = getUserId(login_session["email"])
     location = "/catalog/%s/%s" % (category_name, item_title)
+    if "username" not in login_session:
+        user_id = None
+    else:
+        user_id = login_session["username"]
     state = ''.join(random.choice(string.ascii_uppercase + string.digits)
                     for x in xrange(32))
     login_session['state'] = state
